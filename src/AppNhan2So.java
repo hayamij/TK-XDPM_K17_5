@@ -1,22 +1,20 @@
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class AppNhan2So {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		nhan2So();
+		Scanner sc = new Scanner(System.in);
+		PrintWriter pw = new PrintWriter(System.out);
+		
+		InputInterface inWrapper = new InputWrappter(sc);
+		OutputInterface outWrappter = new OutputWrappter(pw);
+		                      // dependency injection
+		Nhan2So nhan2So = new Nhan2So(inWrapper,outWrappter);
+		nhan2So.nhan2So();
 	}
 	
-	static void nhan2So() {
-		//Bàn phím - input
-		Scanner keyboard = new Scanner(System.in);
-		int num1 = keyboard.nextInt();
-		int num2 = keyboard.nextInt();
-		
-		int result = num1 * num2;//high level
-		
-		//output
-		System.out.println("Result: " + result);
-	}
+	
 
 }
