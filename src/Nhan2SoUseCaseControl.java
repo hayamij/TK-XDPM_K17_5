@@ -13,7 +13,9 @@ public class Nhan2SoUseCaseControl {
 	}
 	
 	public void execute() {
+		out.output("[EM XIN SO 1]:");
 		int num1 = in.input();
+		out.output("[EM XIN SO 2]:");
 		int num2 = in.input();
 		n2so.setNumber1(num1);
 		n2so.setNumber2(num2);
