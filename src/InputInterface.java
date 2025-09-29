@@ -1,4 +1,4 @@
 
 public interface InputInterface {
-	int input();
+	InputData input();
 }

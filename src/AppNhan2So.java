@@ -8,7 +8,8 @@ public class AppNhan2So {
 		Scanner sc = new Scanner(System.in);
 		PrintWriter pw = new PrintWriter(System.out);
 		
-		InputInterface inWrapper = new InputWrappter(sc);
+		//InputInterface inWrapper = new UIConsole(sc, pw);
+		InputInterface inWrapper = new GUI();
 		OutputInterface outWrappter = new OutputWrappter(pw);
 		                      // dependency injection
 		Nhan2So nhan2So = new Nhan2So();
