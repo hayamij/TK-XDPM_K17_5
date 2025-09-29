@@ -11,8 +11,11 @@ public class AppNhan2So {
 		InputInterface inWrapper = new InputWrappter(sc);
 		OutputInterface outWrappter = new OutputWrappter(pw);
 		                      // dependency injection
-		Nhan2So nhan2So = new Nhan2So(inWrapper,outWrappter);
-		nhan2So.nhan2So();
+		Nhan2So nhan2So = new Nhan2So();
+		
+		Nhan2SoUseCaseControl control = 
+				new Nhan2SoUseCaseControl(inWrapper, outWrappter, nhan2So);
+		control.execute();
 	}
 	
 	
