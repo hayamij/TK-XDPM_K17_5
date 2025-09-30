@@ -1,0 +1,5 @@
+policy
+usecase
+decoupling (tách rời lowlevel ra khỏi highlevel)
+lowlevel phụ thuộc vào highlevel (theo công cụ BCE)
+muốn tách được phải lấy usecase làm trọng tâm (tách cấp thấp và cấp cao trong usecase)

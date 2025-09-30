@@ -1,20 +1,8 @@
-import java.io.PrintWriter;
-import java.util.Scanner;
-
+import presentation.window;
 public class AppNhan2So {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		PrintWriter pw = new PrintWriter(System.out);
-		
-		InputInterface inWrapper = new InputWrappter(sc);
-		OutputInterface outWrappter = new OutputWrappter(pw);
-		                      // dependency injection
-		Nhan2So nhan2So = new Nhan2So(inWrapper,outWrappter);
-		nhan2So.nhan2So();
+		new window();
 	}
 	
-	
-
 }
