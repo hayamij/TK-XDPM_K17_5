@@ -1,3 +1,4 @@
+package business;
 
 public class Nhan2So {
 	private int number1;

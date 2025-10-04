@@ -1,3 +1,4 @@
+package presentation;
 
 public class InputData {
 	public int num1;

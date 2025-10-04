@@ -1,3 +1,7 @@
+package business;
+import presentation.InputData;
+import presentation.InputInterface;
+import presentation.OutputInterface;
 
 public class Nhan2SoUseCaseControl {
 	private InputInterface in;

@@ -1,6 +1,13 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import business.Nhan2So;
+import business.Nhan2SoUseCaseControl;
+import presentation.GUI;
+import presentation.InputInterface;
+import presentation.OutputInterface;
+import presentation.OutputWrappter;
+
 public class AppNhan2So {
 
 	public static void main(String[] args) {
@@ -11,7 +18,6 @@ public class AppNhan2So {
 		//InputInterface inWrapper = new UIConsole(sc, pw);
 		InputInterface inWrapper = new GUI();
 		OutputInterface outWrappter = new OutputWrappter(pw);
-		                      // dependency injection
 		Nhan2So nhan2So = new Nhan2So();
 		
 		Nhan2SoUseCaseControl control = 
