@@ -7,24 +7,36 @@ import presentation.GUI;
 import presentation.InputInterface;
 import presentation.OutputInterface;
 import presentation.OutputWrappter;
+import presentation.SwingUI;
 
 public class AppNhan2So {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		PrintWriter pw = new PrintWriter(System.out);
+
+		// Console UI
+
+		// Scanner sc = new Scanner(System.in);
+		// PrintWriter pw = new PrintWriter(System.out);
 		
-		//InputInterface inWrapper = new UIConsole(sc, pw);
-		InputInterface inWrapper = new GUI();
-		OutputInterface outWrappter = new OutputWrappter(pw);
+		//InputInterface input = new UIConsole(sc, pw);
+		// OutputInterface output = new OutputWrappter(pw);
+
+		// GUI (Dialog)
+
+		// InputInterface input = new GUI();
+		// OutputInterface output = new GUI();
+
+		//Swing UI
+		
+		InputInterface input = new SwingUI();
+		OutputInterface output = new SwingUI();
+
+		// Usecase Control
+
 		Nhan2So nhan2So = new Nhan2So();
-		
-		Nhan2SoUseCaseControl control = 
-				new Nhan2SoUseCaseControl(inWrapper, outWrappter, nhan2So);
+		Nhan2SoUseCaseControl control = new Nhan2SoUseCaseControl(input, output, nhan2So);
 		control.execute();
 	}
 	
 	
-
 }
